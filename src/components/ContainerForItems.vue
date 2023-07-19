@@ -27,7 +27,7 @@ export default {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-gap: 2rem;
     max-width: 85rem;
-    margin: 3rem auto;
+    margin: 1rem auto;
     padding: 0 5rem;
 }
 </style>

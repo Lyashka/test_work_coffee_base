@@ -12,6 +12,7 @@ export const useCafeStore = defineStore('cafeStore', {
     async getCafe() {
       await axios.get('https://bandaumnikov.ru/api/test/site/get-index')
       .then(res => this.dataBaseCafe = res.data.data)
+      localStorage.setItem('dataBaseCafe', JSON.stringify(this.dataBaseCafe))
       console.log(this.dataBaseCafe);
     }
   }

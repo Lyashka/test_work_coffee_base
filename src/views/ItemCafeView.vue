@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <Header @updateData="updateData"/>
     <div class="itemContainer">
           <img :src="urlPhoto" >
 
@@ -14,11 +16,17 @@
             
           </div>
     </div>
+  </div>
+    
 </template>
 
 <script>
 import { useCafeStore } from '../stores/cafeStore';
+import Header from '../components/Header.vue';
 export default {
+  components:{
+    Header
+  },
   setup(){
     const cafeStore = useCafeStore()
     return{
@@ -41,11 +49,13 @@ export default {
       timeName: '',
       urlPhoto: '',
       distanceNominal: '',
+
+    
     }
   },
-
-  mounted() {
-    this.cafeStore.itemCafe = JSON.parse(localStorage.getItem('cafeItem'))
+  methods:{
+    updateData() {
+      this.cafeStore.itemCafe = JSON.parse(localStorage.getItem('cafeItem'))
     this.name = this.cafeStore.itemCafe.name
 
     if(this.cafeStore.itemCafe.business_lunch){
@@ -106,6 +116,11 @@ export default {
       }
 
     console.log(this.cafeStore.itemCafe);
+    }
+  },
+
+  mounted() {
+    this.updateData()
   },
 
   
@@ -125,6 +140,8 @@ img{
   margin-left: 2rem; 
   max-width: 60rem;
   max-height: 50rem; 
+  border-radius: 0.25rem;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 h3 {
   font-size: xx-large;

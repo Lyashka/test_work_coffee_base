@@ -11,6 +11,7 @@
 import { useCafeStore } from '../stores/cafeStore';
 import Cube from '../components/icons/cube.svg'
 import Back from '../components/icons/Back.svg'
+import Loading from '../components/icons/Loading.gif'
 export default {
     setup(){
         const cafeStore = useCafeStore() 
@@ -22,6 +23,7 @@ export default {
         return{
             Cube:Cube,
             Back:Back,
+            Loading:Loading,
             arrayCafe: [],
             randomElement: '',
             

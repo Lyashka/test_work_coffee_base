@@ -13,7 +13,7 @@
             <h3>Бизнес-ланч: <span>{{ business_lunch }}</span></h3>
             <h3>Кухня: <span>{{ cuisine }}</span></h3> 
             <h3>Средний чек: <span>{{ price }} {{ nominal }}</span></h3>
-            <h3>Адресс: <span>{{ address }}</span></h3>
+            <h3>Адрес: <span>{{ address }}</span></h3>
             <h3>Дистанция: <span>{{ distance }} {{ distanceNominal }}</span></h3>
             <h3>Ориентир: <span>{{ landmark }}</span></h3>
             <h3>Сколько идти: <span>{{ time }} {{ timeName }}</span></h3>
@@ -147,8 +147,8 @@ export default {
 }
 img{
   margin-left: 2rem; 
-  max-width: 40rem;
-  max-height: auto; 
+  max-width: 50rem;
+  max-height: 50rem; 
   border-radius: 0.25rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }

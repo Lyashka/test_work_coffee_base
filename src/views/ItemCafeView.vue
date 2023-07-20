@@ -3,7 +3,7 @@
     <Header @updateData="updateData"/>
     <div class="itemContainer">
       <div class="container_name_img">
-        <h3><span>{{ name }}</span></h3>
+        <h3  class="nameCafe"><span>{{ name }}</span></h3>
           <img :src="urlPhoto" >
       </div>
      
@@ -166,6 +166,9 @@ h3 {
 }
 span{
   font-weight:normal;
+}
+.nameCafe{
+  margin-bottom: 0.3rem;
 }
 
 /* @media screen and (max-width: 1450px) {

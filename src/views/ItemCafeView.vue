@@ -2,10 +2,14 @@
   <div>
     <Header @updateData="updateData"/>
     <div class="itemContainer">
+      <div class="container_name_img">
+        <h3><span>{{ name }}</span></h3>
           <img :src="urlPhoto" >
+      </div>
+     
 
           <div class="textStyle">
-            <h3>Название: <span>{{ name }}</span></h3>
+            <!-- <h3>Название: <span>{{ name }}</span></h3> -->
             <h3>Бизнес-ланч: <span>{{ business_lunch }}</span></h3>
             <h3>Кухня: <span>{{ cuisine }}</span></h3> 
             <h3>Средний чек: <span>{{ price }} {{ nominal }}</span></h3>
@@ -115,7 +119,7 @@ export default {
         this.address = this.cafeStore.itemCafe.address
       }
 
-    console.log(this.cafeStore.itemCafe);
+    // console.log(this.cafeStore.itemCafe);
     }
   },
 
@@ -128,7 +132,11 @@ export default {
 </script>
 
 <style scoped>
-
+.container_name_img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .itemContainer{
   display: flex;
   margin-top: 3rem ;
@@ -138,21 +146,63 @@ export default {
 }
 img{
   margin-left: 2rem; 
-  max-width: 60rem;
-  max-height: 50rem; 
+  max-width: 40rem;
+  max-height: auto; 
   border-radius: 0.25rem;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 h3 {
   font-size: xx-large;
 }
 .textStyle{
+  margin-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content:space-around;
+  color:rgba(0, 0, 0, 0.8)
 }
 span{
   font-weight:normal;
+}
 
+/* @media screen and (max-width: 1450px) {
+  .itemContainer{
+  display: flex;
+  margin-top: 3rem ;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: wrap;
+}
+img{
+  margin: auto; 
+  max-width: 40rem;
+  max-height: auto; 
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.textStyle{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+} */
+
+/* } */
+@media screen and (max-width: 1400px) {
+  .itemContainer{
+  display: flex;
+  margin-top: 3rem ;
+  flex-direction: column;
+  justify-content:space-around;
+  padding-right: 1rem;
+}
+
+img{
+  margin-left: 1rem; 
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
 }
 </style>

@@ -16,7 +16,15 @@
   </template>
   
   <script>
+  import { useCafeStore } from '../stores/cafeStore';
   export default {
+    setup() {
+      const cafeStore = useCafeStore() 
+        return{
+            cafeStore
+        }
+    },
+
     data() {
       return {
         urlPhoto: '',
@@ -36,9 +44,12 @@
     },
 
     methods:{
-        openItemCafe() {
-            localStorage.setItem('cafeItem',JSON.stringify(this.item))
-            this.$router.push('/Cafe')
+       async openItemCafe() {
+          this.cafeStore.show_btn_back = true
+          localStorage.setItem('show_btn_back', JSON.stringify(this.cafeStore.show_btn_back))
+
+         await this.cafeStore.getOneCafe(this.item.id)
+          this.$router.push('/Cafe')
         }
     },
 

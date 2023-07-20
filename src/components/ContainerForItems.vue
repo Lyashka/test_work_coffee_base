@@ -9,10 +9,10 @@ import ItemCafe from './ItemCafe.vue';
 
 import { useCafeStore } from '../stores/cafeStore';
 export default {
-mounted(){
+    mounted(){
         this.cafeStore.show_btn_back = false
         localStorage.setItem('show_btn_back', JSON.stringify(this.cafeStore.show_btn_back))
-},
+    },
 
     components: {
         ItemCafe

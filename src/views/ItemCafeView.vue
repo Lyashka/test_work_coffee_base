@@ -126,6 +126,8 @@ export default {
 
   mounted() {
     this.updateData()
+    this.cafeStore.show_btn_back = true
+    localStorage.setItem('show_btn_back', JSON.stringify(this.cafeStore.show_btn_back))
   },
 
   

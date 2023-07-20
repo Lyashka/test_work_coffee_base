@@ -111,6 +111,7 @@
     font-size: x-large;
     color:black;
     font-weight: bold;
+    margin-bottom: 0.2rem;
   }
   .textStyle{
     color: aliceblue;

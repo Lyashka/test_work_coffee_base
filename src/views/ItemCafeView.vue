@@ -61,7 +61,7 @@ export default {
   methods:{
     updateData() {
       this.cafeStore.itemCafe = JSON.parse(localStorage.getItem('cafeItem'))
-    this.name = this.cafeStore.itemCafe.name
+      this.name = this.cafeStore.itemCafe.name
 
     if(this.cafeStore.itemCafe.business_lunch){
       this.business_lunch = 'есть'
@@ -74,6 +74,7 @@ export default {
 
     if(this.cafeStore.itemCafe.distance === 0){
       this.distance = '-'
+      this.distanceNominal = ''
     }
     else{
       this.distance = this.cafeStore.itemCafe.distance
@@ -92,8 +93,10 @@ export default {
       } else {
         this.urlPhoto = this.cafeStore.itemCafe.photo;
       }
-    if (this.cafeStore.itemCafe.price === 0){
+    if (this.cafeStore.itemCafe.price == 0){
+      console.log('G');
         this.price = '-'
+        this.nominal = ''
       }
       else {
         this.price = this.cafeStore.itemCafe.price
@@ -109,6 +112,7 @@ export default {
 
       if(this.cafeStore.itemCafe.time === 0) {
         this.time = '-' 
+        this.timeName = ''
       }
       else{
         this.time = this.cafeStore.itemCafe.time

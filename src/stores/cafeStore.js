@@ -1,7 +1,7 @@
 // import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
-import { async } from 'jshint/src/prod-params'
+// import { async } from 'jshint/src/prod-params'
 
 export const useCafeStore = defineStore('cafeStore', {
   state: () => ({

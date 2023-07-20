@@ -29,6 +29,7 @@ import { useCafeStore } from '../stores/cafeStore';
 import Header from '../components/Header.vue';
 export default {
   components:{
+    // eslint-disable-next-line vue/no-reserved-component-names
     Header
   },
   setup(){

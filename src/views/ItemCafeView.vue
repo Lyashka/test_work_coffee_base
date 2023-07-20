@@ -94,7 +94,6 @@ export default {
         this.urlPhoto = this.cafeStore.itemCafe.photo;
       }
     if (this.cafeStore.itemCafe.price == 0){
-      console.log('G');
         this.price = '-'
         this.nominal = ''
       }
